@@ -1,0 +1,15 @@
+# Dependency folders
+node_modules/
+
+# Test reports
+mochawesome-report/
+
+# Screenshots
+screenshots/
+
+# Environment files
+.env
+
+# Misc
+.DS_Store
+npm-debug.log*
