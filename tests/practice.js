@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 const namee = 'Ratri';
 let count = 2;
 const msg = `Hi ${namee}, you ran ${count} tests.`;
@@ -8,6 +10,7 @@ const country= 'Bangladesh';
 console.log("Age:",age);
 console.log("Country:",country);
 
+//typeof use
 const name1= 'Ratri';
 const score1 = 95;
 const b= true;
@@ -21,7 +24,7 @@ console.log('N type:',typeof n);
 console.log("A type:",typeof a);
 console.log("S type:",typeof s);
 
-
+//grade using if else
 function getGrade(name, score) {
     let grade;
     if (score>=80) {
@@ -45,7 +48,66 @@ console.log(getGrade('Kabir', 85));
 console.log(getGrade('Bir', 65));
 console.log(getGrade('Abir', 45));
 
-
+//Even
 const number = [1,2,3,4,5,6,7,8,9,10];
 const evens = number.filter(num => num % 2 === 0);
 console.log('Even Number:', evens);
+
+//Even check
+const numm= readlineSync.questionInt("Enter the number to check Even: ");
+function isEven(numm) {
+    return numm%2===0;
+}
+console.log(`Is ${numm} even?`, isEven(numm));
+
+//array odd and even check
+const numb = readlineSync.question("enter the numbers for odd and even:");
+const numbb = numb.split(',').map(i => parseInt(i.trim(),10));
+let odds = [];
+let evenss = [];
+for (let i of numbb){
+    if(i%2===0){
+        evenss.push(i);
+    }
+    else{
+        odds.push(i);
+    }
+}
+console.log("Even Number: ", evenss);
+console.log('Odd Numbers: ',odds);
+
+//array for sum
+const ar = readlineSync.question("Enter the numbers for sum: ");
+const aa = ar.split(',').map(nn => parseInt(nn.trim(),10));
+let summ=0;
+for(const nn of aa){
+    summ += nn;
+}
+console.log("Array: ",aa);
+console.log("Sum:",summ);
+
+//array -> Maxmimum Number
+const cc= [50,20,45,89,34,12];
+let max = cc[0];
+for(let i1 of cc){
+    if(i1 > max){
+        max = i1;
+    }
+}
+console.log("Maximum Number: ",max);
+
+//Reverse Array
+const r=[1,2,3,4,5];
+let reversed =[];
+for(let i = r.length-1; i>=0; i--){
+    reversed.push(r[i]);
+}
+console.log("Reversed Array: ",reversed);
+
+//Palindrome চেক
+function ispalindrome(str){
+    const p = str.split('').reverse().join('');
+    return str === p;
+}
+console.log("This is Palindrome or not: ",ispalindrome('madam'));
+console.log("This is Palindrome or not: ",ispalindrome('hello'));
