@@ -4,5 +4,8 @@ package-lock.json
 package.json
 tests/*
 !tests/practice.js
+!tests/factorial.js
+!tests/OddEven.js
+
 
 
