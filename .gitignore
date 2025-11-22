@@ -6,6 +6,8 @@ tests/*
 !tests/practice.js
 !tests/factorial.js
 !tests/OddEven.js
+!tests/ternary.js
+!tests/minMax.js
 
 
 
